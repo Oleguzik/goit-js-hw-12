@@ -8,9 +8,9 @@ import axios from 'axios';
 
 const searchForm = document.querySelector('.search');
 const gallery = document.querySelector('.gallery');
-const moreBtn = document.querySelector('.moreBtn');
 const textInput = document.querySelector('.textInput');
 const loader = document.querySelector('.loader');
+const moreBtn = document.querySelector('.moreBtn');
 const modal = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
@@ -107,7 +107,7 @@ async function moreDataBtn(requestData) { // button for more search results
       setScrolling(); // scroll to show more images
     } else {
       moreBtn.style.visibility = 'hidden';
-      moreBtn.removeEventListener('click', onMoreSubmit) // remove event listener for more button to release resources 
+      // moreBtn.removeEventListener('click', onMoreSubmit) // remove event listener for more button to release resources 
       myAlert("We're sorry, but you've reached the end of search results.");
     }
   } catch (error) {
